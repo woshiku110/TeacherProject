@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/splash/splash",
+    "pages/question/question",
+    "pages/report/report",
+    "pages/teacherList/teacherList",
+    "pages/teacherDetail/teacherDetail",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,98 @@
+<view class="page">
+    <view class="page_top">
+        <image style="width:100%;height:100%;mode=scaleToFill" src="images/wall_bg.jpg"></image>
+    </view>
+    <view class="page_top_head">
+        <image style="width:100%;height:100%;border-radius:50%;" src="images/icon_head.jpg"></image>
+    </view>
+    <view class="page_top_empty">
+    </view>
+    <view class="page_top_desc">
+        <view style="width:100%;margin-top:20rpx;text-align:center">
+            <label style="font-size:14pt;">{{name}}</label>
+        </view>
+        <view style="width:100%;margin-top:10rpx;font-size:12pt;color:dimgray;text-align:center">
+            <label>粉丝 : 456</label>
+        </view>
+        <view style="width:100%;margin-top:10rpx;font-size:12pt;color:dimgray;text-align:center">
+            <label>{{signDesc}}</label>
+        </view>
+        <view style="width:100%;margin-top:10rpx;font-size:12pt;color:lightgray;text-align:center">
+            <label>{{college}}</label>
+        </view>
+        <view style="width:100%;margin-top:10rpx;font-size:12pt;color:lightgray;text-align:center">
+            <label>{{time}}</label>
+        </view>
+        <view style="width:100%;margin-top:10rpx;font-size:12pt;color:lightsteelblue;text-align:center">
+            <label>正在给{{student}}位学生上课</label>
+        </view>
+        <view style="width:100%;margin-top:10rpx;font-size:12pt;color:red;text-align:center">
+            <label>￥{{price}}</label>
+            <label style="color:lightgray">/小时</label>
+        </view>
+    </view>
+    <view class="page_content">
+            <view class="page_content_subject_title">
+                <view style="width:1rpx;height:55rpx;background-color:blue"></view>
+                <view style="width:94%;height:65rpx;margin-left:3%;display:flex;align-items:center;border-bottom: 1rpx solid #e2e2e2">
+                    <label style="text-align: center">科目</label>
+                </view>
+            </view>
+            <view class="page_content_subject_tag">
+                <block wx:for="{{subjectTags}}" wx:for-item="subjectTag"  wx:key="*this">
+                    <view class="page_content_subject_tag_item">{{subjectTag}}</view>
+                </block>
+            </view>
+            <view class="page_content_subject_title">
+                <view style="width:1rpx;height:55rpx;background-color:blue"></view>
+                <view style="width:94%;height:65rpx;margin-left:3%;display:flex;align-items:center;border-bottom: 1rpx solid #e2e2e2">
+                    <label style="text-align: center">技能标签</label>
+                </view>
+            </view>
+            <view class="page_content_subject_tag">
+                <block wx:for="{{skillTags}}" wx:for-item="skillTag"  wx:key="*this">
+                    <view class="page_content_subject_tag_item">{{skillTag}}</view>
+                </block>
+            </view>
+            <view class="page_content_subject_title">
+                <view style="width:1rpx;height:55rpx;background-color:blue"></view>
+                <view style="width:94%;height:65rpx;margin-left:3%;display:flex;align-items:center;border-bottom: 1rpx solid #e2e2e2">
+                    <label style="text-align: center">个人相册</label>
+                </view>
+            </view>
+            <view class="page_content_album">
+                <block wx:for="{{albumImages}}" wx:for-item="albumImage"  wx:key="*this">
+                    <image style="width:160rpx;height:160rpx;margin:10rpx;" src="images/{{albumImage}}" mode="scaleToFill"></image>
+                </block>
+            </view>
+            <view class="page_content_subject_title">
+                <view style="width:1rpx;height:55rpx;background-color:blue"></view>
+                <view style="width:94%;height:65rpx;margin-left:3%;display:flex;align-items:center;border-bottom: 1rpx solid #e2e2e2">
+                    <view style="display:flex;width:100%;justify-content: space-between;align-items: center;">
+                        <label style="text-align: center">评分及评论</label>
+                        <label style="text-align: center;color:darkturquoise">综合评分{{point}}</label>
+                    </view>
+                    
+                </view>
+            </view>
+            <view class="page_content_talk_area">
+                <block wx:for="{{talkList}}" wx:for-item="talk"  wx:key="*this">
+                    <view class="page_content_talk_area_item">
+                        <view style="display:flex;justify-content: space-between;align-items:center">
+                            <view style="display:inline-flex;align-items:center;">
+                                <image style="width:90rpx;height:90rpx;border-radius:45rpx" src="images/{{talk.icon}}"                mode="scaleToFill"></image>
+                                <label style="margin-left:15rpx">{{talk.name}}</label>
+                            </view>
+                            <label>{{talk.date}}</label>
+                        </view>
+                        <view style="margin-top:10rpx;margin-bottom:15rpx">
+                            <label>{{talk.desc}}</label>
+                        </view>
+                    </view> 
+                </block>
+            </view>
+            <view style="display:flex;align-items:center;justify-content:center;height:80rpx;background-color:#fe9c75">
+                <label style="color:white">立即预约</label>
+            </view>
+    </view>
+</view>

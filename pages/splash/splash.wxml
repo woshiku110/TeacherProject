@@ -1,0 +1,5 @@
+<view class="page">
+    <image style="width: 250rpx" mode="widthFix" src="{{picPath}}"></image>
+</view>
+
+

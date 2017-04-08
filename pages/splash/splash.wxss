@@ -1,0 +1,24 @@
+.page{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: cadetblue;
+    justify-content: center;
+    align-items: center;
+}
+.test_lay{
+    display: inline-block;
+    /*position: absolute;
+    left: calc(100% - 500rpx);
+    top:50rpx;*/
+}
+.splash_body{
+    min-height: 100%;
+    background-color: yellow;
+}
+.body_view{
+    height: 100%;
+    width: 100%;
+    background-color: cadetblue;
+}

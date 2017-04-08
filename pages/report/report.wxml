@@ -1,0 +1,10 @@
+<view class="page">
+    <view class="top_title">
+        <view class="top_title_line">
+            <label class="top_title_line_label">学习能力报告</label>
+        </view>
+    </view>
+    <view class="bottom_bt" bindtap="userClick">
+    去选择我的家教
+    </view>
+</view>
