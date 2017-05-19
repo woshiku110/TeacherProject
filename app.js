@@ -215,6 +215,84 @@ App({
             "substatus": "1"
         }
   ],
+  baseData:[
+    {
+      "id": "11",
+      "name": "您的孩子是否有“学习注意力不集中、做事磨蹭、有头无尾，缺乏时间观念和任务感”的现象吗？",
+      "category_name": "基础题目",
+      "cid": "2",
+      "substatus": "1",
+      "is_checkbox": "0",
+      "option": [
+        {
+          "id": "39",
+          "cid": "2",
+          "answer": "A.经常"
+        },
+        {
+          "id": "40",
+          "cid": "2",
+          "answer": "B.偶尔"
+        },
+        {
+          "id": "41",
+          "cid": "2",
+          "answer": "C.没有"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "孩子是否主动向您倾诉想法",
+      "category_name": "基础题目",
+      "cid": "2",
+      "substatus": "1",
+      "is_checkbox": "0",
+      "option": [
+        {
+          "id": "27",
+          "cid": "2",
+          "answer": "A.经常"
+        },
+        {
+          "id": "28",
+          "cid": "2",
+          "answer": "B.偶尔"
+        },
+        {
+          "id": "29",
+          "cid": "2",
+          "answer": "C.没有"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "您的孩子有不会预习、不会巩固复习、不重视平时的作业和练习的现象吗？",
+      "category_name": "基础题目",
+      "cid": "2",
+      "substatus": "1",
+      "is_checkbox": "0",
+      "option": [
+        {
+          "id": "36",
+          "cid": "2",
+          "answer": "A.有"
+        },
+        {
+          "id": "37",
+          "cid": "2",
+          "answer": "B.偶尔"
+        },
+        {
+          "id": "38",
+          "cid": "2",
+          "answer": "C.没有"
+        }
+      ]
+    }
+  ]
+  ,
   // 问题和答案
   qosAnswers:[
     {
