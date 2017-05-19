@@ -48,6 +48,173 @@ App({
   }
   ,
   qosIndex:0,
+  qosAns:[
+      {
+            "category_name": "基础筛选题目",
+            "cid": "1",
+            "id": "1",
+            "is_checkbox": "0",
+            "name": "您孩子的性别",
+            "option": [
+                {
+                    "answer": "A.男",
+                    "cid": "0",
+                    "id": "1"
+                },
+                {
+                    "answer": "B.女",
+                    "cid": "0",
+                    "id": "2"
+                }
+            ],
+            "substatus": "1"
+        },
+        {
+            "category_name": "基础筛选题目",
+            "cid": "1",
+            "id": "2",
+            "is_checkbox": "0",
+            "name": "您孩子的年级",
+            "option": [
+                {
+                    "answer": "A.初一年级、初二年级",
+                    "cid": "0",
+                    "id": "3"
+                },
+                {
+                    "answer": "B.初三年级",
+                    "cid": "0",
+                    "id": "4"
+                },
+                {
+                    "answer": "C.高一年级、高二年级",
+                    "cid": "0",
+                    "id": "5"
+                },
+                {
+                    "answer": "D.高三年级",
+                    "cid": "0",
+                    "id": "6"
+                }
+            ],
+            "substatus": "1"
+        },
+        {
+            "category_name": "基础筛选题目",
+            "cid": "1",
+            "id": "3",
+            "is_checkbox": "1",
+            "name": "您孩子的弱项学科(此题可多选)",
+            "option": [
+                {
+                    "answer": "A.语文",
+                    "cid": "3",
+                    "id": "7"
+                },
+                {
+                    "answer": "B.数学",
+                    "cid": "4",
+                    "id": "8"
+                },
+                {
+                    "answer": "C.英语",
+                    "cid": "5",
+                    "id": "9"
+                },
+                {
+                    "answer": "D.物理",
+                    "cid": "6",
+                    "id": "10"
+                },
+                {
+                    "answer": "E.化学",
+                    "cid": "7",
+                    "id": "11"
+                },
+                {
+                    "answer": "F.生物",
+                    "cid": "11",
+                    "id": "12"
+                },
+                {
+                    "answer": "G.历史",
+                    "cid": "8",
+                    "id": "13"
+                },
+                {
+                    "answer": "H.地理",
+                    "cid": "9",
+                    "id": "14"
+                },
+                {
+                    "answer": "I.政治",
+                    "cid": "10",
+                    "id": "15"
+                }
+            ],
+            "substatus": "1"
+        },
+        {
+            "category_name": "基础筛选题目",
+            "cid": "1",
+            "id": "4",
+            "is_checkbox": "0",
+            "name": "孩子这半年考试的平均成绩为",
+            "option": [
+                {
+                    "answer": "A.30-50",
+                    "cid": "0",
+                    "id": "16"
+                },
+                {
+                    "answer": "B.50-70",
+                    "cid": "0",
+                    "id": "17"
+                },
+                {
+                    "answer": "C.70-90",
+                    "cid": "0",
+                    "id": "18"
+                },
+                {
+                    "answer": "D.90-110",
+                    "cid": "0",
+                    "id": "19"
+                }
+            ],
+            "substatus": "1"
+        },
+        {
+            "category_name": "基础筛选题目",
+            "cid": "1",
+            "id": "5",
+            "is_checkbox": "0",
+            "name": "您希望孩子高考成绩为",
+            "option": [
+                {
+                    "answer": "A.90-100",
+                    "cid": "0",
+                    "id": "20"
+                },
+                {
+                    "answer": "B.100-110",
+                    "cid": "0",
+                    "id": "21"
+                },
+                {
+                    "answer": "C.110-120",
+                    "cid": "0",
+                    "id": "22"
+                },
+                {
+                    "answer": "D.120-130",
+                    "cid": "0",
+                    "id": "23"
+                }
+            ],
+            "substatus": "1"
+        }
+  ],
   // 问题和答案
   qosAnswers:[
     {
@@ -55,19 +222,22 @@ App({
       answers:["A.经常","  B.偶尔","  C.没有"],
       subResult:[{studyType:-1,abilityType:-1},{studyType:0,abilityType:0},{studyType:1,abilityType:0}],
       rightIndex:2,
-      userChooseIndex:0
+      userChooseIndex:0,
+      isSingleItem:true
     },
     {
       qos:"woshiku测试一下，试试看看",
       answers:["  woshiku选择A","  woshiku选择B","  woshiku选择C","  woshiku选择D"],
       rightIndex:1,
-      userChooseIndex:0
+      userChooseIndex:0,
+      isSingleItem:false
     },
     {
       qos:"woshi测试一下，试试看看",
       answers:["  woshiku选择","  woshiku选择","  woshiku选择","  woshiku选择"],
       rightIndex:1,
-      userChooseIndex:0
+      userChooseIndex:0,
+      isSingleItem:true
     }
   ],
   teacherListData:[

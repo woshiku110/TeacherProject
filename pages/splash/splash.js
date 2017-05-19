@@ -18,7 +18,8 @@ Page({
   },
   jumpPage:function(){
     wx.redirectTo({
-        url: '../question/question'
+        //url: '../question/question'
+        url: '../questionOne/questionOne'
     })
   }
 })

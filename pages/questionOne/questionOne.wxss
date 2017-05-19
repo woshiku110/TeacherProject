@@ -99,3 +99,19 @@
     word-wrap:  break-word;
     overflow: auto;
 }
+.bottom_next{
+    display: flex;
+    width:100%;
+    height: 80rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    justify-content: center;
+}
+.bottom_next .bt{
+    display: inline-flex;
+    width: 200rpx;
+    height: 100%;
+    background-color:#fe9c75; 
+    align-items: center;
+    justify-content: center;
+}

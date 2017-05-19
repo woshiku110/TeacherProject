@@ -2,6 +2,7 @@
   "pages":[
     "pages/splash/splash",
     "pages/question/question",
+    "pages/questionOne/questionOne",
     "pages/report/report",
     "pages/teacherList/teacherList",
     "pages/teacherDetail/teacherDetail",

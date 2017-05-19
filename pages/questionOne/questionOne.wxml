@@ -1,0 +1,31 @@
+<view class = "page">
+    <view class = "top_qos">
+        <view class = "top_qos_title" >
+            {{name}}
+        </view>
+        <view class="top_qos_gap"></view>
+        <view class="top_qos_content">
+            <text class="top_qos_content_txt">{{qos}}</text>
+        </view>
+    </view>
+    <view class = "middle_answer">
+        <block wx:for="{{options}}" wx:for-item="option"  wx:key="*this">
+            <block wx:if="{{!option.isChoosed}}">
+                <view class="middle_answer_item" bindtap="userClick" data-value="{{index + 1}}">
+                    {{option.answer}}
+                </view>
+            </block>
+            <block wx:if="{{option.isChoosed}}">
+                    <view class="middle_answer_item_hover" bindtap="userClick" data-value="{{index + 1}}">
+                        {{option.answer}}
+                    </view>
+            </block>
+            
+        </block>
+    </view>
+    <block wx:if="{{isSingle}}">
+        <view class = "bottom_next">
+            <view class= "bt" bindtap="nextQosClick">下一题</view>
+        </view>
+    </block>
+</view>
