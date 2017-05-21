@@ -40,9 +40,13 @@ function loadBasicDatas(loadOk){
     )
 }
 //加载基础数据并把筛选数据上传
-function loadBaseData(param,loadOk){
+function loadBaseData(param,openid,group,loadOk){
     showDialog();
-    UrlLoad('http://119.23.22.247/index.php/apicloud/index/basics',{"sub":param},
+    UrlLoad('http://119.23.22.247/index.php/apicloud/index/basics',
+    {"sub":param,
+     "openid":openid,
+     "group":group   
+    },
         function(isOk,data){
             if(isOk){
                 loadOk(true,data);
@@ -54,7 +58,59 @@ function loadBaseData(param,loadOk){
         }
     )
 }
+//加载最弱学课
+function loadWeak(param,openid,group,loadOk){
+    showDialog();
+    UrlLoad('http://119.23.22.247/index.php/apicloud/index/weak',
+    {"sub":param,
+     "openid":openid,
+     "group":group   
+    },
+        function(isOk,data){
+            if(isOk){
+                loadOk(true,data);
+                closeDialog();
+            }else{
+                loadOk(false,data);
+                closeDialog();
+            }
+        }
+    )
+}
+function userLogin(){
+    wx.login({
+        success:function(e){
+            console.log("登录成功");
+            console.log(e);
+            wx.request({
+              url: 'https://api.weixin.qq.com/sns/jscode2session',
+              data: {
+                  "js_code":e.code,
+                  "appid":'wx154c1ef4940d0887',
+                  "secret":""
+              },
+              method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+              // header: {}, // 设置请求的 header
+              success: function(res){
+                // success
+              },
+              fail: function(res) {
+                // fail
+              },
+              complete: function(res) {
+                // complete
+              }
+            })
+        },
+        fail:function(e){
+            console.log("登录失败");
+            console.log(e);
+        }
+    });
+}
 module.exports.showDialog = showDialog;
 module.exports.closeDialog = closeDialog;
 module.exports.loadBasicDatas = loadBasicDatas;
 module.exports.loadBaseData = loadBaseData;
+module.exports.loadWeak = loadWeak;
+module.exports.userLogin = userLogin;
