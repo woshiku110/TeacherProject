@@ -15,7 +15,7 @@ function UrlLoad(address,params,loadOk){
         data: params,
         header: {
             'content-type': 'application/json'
-        },
+        }, 
         success: function(res) {
           loadOk(true,res);
         },

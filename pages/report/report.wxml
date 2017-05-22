@@ -36,7 +36,7 @@
             <text class="content">{{goodContent}}</text>
         </view>
         <image src="images/home-teacher.png" style="width:200rpx;height:80rpx"></image>
-        <text style="margin-left:10rpx;margin-top:10rpx;margin-bottom:20rpx">专业课程</text>
+        <text style="margin-left:10rpx;margin-top:10rpx;margin-bottom:20rpx;color: #666;">专业课程</text>
         <view class="subject">
             <block wx:for="{{teacherSubs}}" wx:for-item="teacherSub"  wx:key="*this">
                 <view class="view">
@@ -47,17 +47,17 @@
         <view class="line" style="margin-top:25rpx;margin-bottom:25rpx"></view>
         <view class="teacher">
             <view class="top">
-                <text style="margin-left:10rpx">基础薄弱</text>
+                <text style="margin-left:10rpx;color: #666">{{firstProblem}}</text>
                 <text style="margin-right:10rpx">{{firstPersonAmount}}位教师拥有些技能</text>
             </view>
-            <text style="width:calc(100% - 20rpx);margin-top:10rpx;margin-bottom:10rpx;margin-left:10rpx">{{tutor_ability1}}</text>
-            <view class="top">
-                <text style="margin-left:10rpx">基础薄弱</text>
-                <text style="margin-right:10rpx">{{firstPersonAmount}}位教师拥有些技能</text>
+            <text style="width:calc(100% - 20rpx);margin-top:20rpx;margin-bottom:10rpx;margin-left:10rpx;color: #666;font-size:12pt">{{tutor_ability1}}</text>
+            <view class="top" style="margin-top:25rpx">
+                <text style="margin-left:10rpx;color: #666">{{secondProblem}}</text>
+                <text style="margin-right:10rpx">{{secondPersonAmount}}位教师拥有些技能</text>
             </view>
-            <text style="width:calc(100% - 20rpx);margin-top:10rpx;margin-bottom:10rpx;margin-left:10rpx">{{tutor_ability1}}</text>
+            <text style="width:calc(100% - 20rpx);margin-top:20rpx;margin-bottom:10rpx;margin-left:10rpx;color: #666;font-size:12pt">{{tutor_ability2}}</text>
         </view>
-        
+        <view class="bottom_bt" bindtap="userClick">去选择我的家教</view>
     </view>
 
     <!--<view class="bottom_bt" bindtap="userClick">去选择我的家教</view>-->

@@ -7,12 +7,16 @@ Page({
         teacherListData:[],
         showModalStatus:false,
         loveModalStatus:false,
-        loveText:"您好，要收藏吗？"
+        loveText:"您好，要收藏吗？",
+        myTeacherList:''
     },
     onLoad:function(){
         that = this;
         that.setData(
-            {teacherListData:app.teacherListData}
+            {
+                teacherListData:app.teacherListData,
+                myTeacherList:app.myTeacherList
+            }
         );
         console.log(that.data.teacherListData);
     },
