@@ -1,28 +1,104 @@
 .page{
     display: flex;
-    height: 100%;
+    min-height:100%;
     width: 100%;
-    position: absolute;
     background-color: white;
     flex-direction: column;
+}
+.top_conatainer{
+    display: flex;
+    flex-direction: column;
+    /*background: url("images/teacher-background.jpg");*/
 }
 .top_title{
     display: flex;
     width: 100%;
     height: 90rpx;
-    background: #F0EFF4;
     align-items: center;
 }
-.top_title_line{
-    display: flex;
-    width:100%;
-    height: 65rpx;
-    border-left: solid 4rpx #fe9c75;
-    background-color: #F0EFF4;
-    align-items: center;
+.total_point{
+    display:flex; 
+    flex-direction: column;  
 }
-.top_title_line_label{
+.total_point .text_title{
+    display: inline-flex;
     margin-left: 20rpx;
+    color: #FF634E;
+}
+.total_point .text_content{
+    display: inline-flex;
+    margin-left: 15rpx;
+    width: calc(100% - 30rpx);
+    margin-top: 15rpx;
+    margin-bottom: 20rpx;
+}
+.content_container{
+    display: flex;
+    flex-direction: column;
+}
+.content_container .subject{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.content_container .subject .view{
+    display: inline-flex;
+    min-width: 140rpx;
+    height: 50rpx;
+    background: #FF925B;
+    border-radius: 5rpx;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10rpx;
+    margin-top:10rpx; 
+}
+.content_container .subject .text{
+    color: white;
+    font-size: 10pt;
+}
+.content_container .badSubject{
+    display: flex;
+    flex-direction: column;
+}
+.content_container .badSubject .title{
+    display: flex;
+    margin-left:10rpx;
+    margin-top: 15rpx;
+    width:calc(100% - 20rpx);
+    height: 80rpx;
+    align-items: center;
+}
+.content_container .badSubject .point{
+    display: inline-block;
+    margin-left: 10rpx;
+    margin-top:20rpx;
+    margin-bottom: 20rpx;
+    color: #FF925B;
+}
+.content_container .badSubject .content{
+    display: inline-block;
+    width:calc(100% - 20rpx);
+    margin-left:10rpx; 
+}
+.content_container .teacher{
+    display: flex;
+    flex-direction: column;
+}
+.content_container .teacher .top{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.line{
+    display: flex;
+    height: 2rpx;
+    width: calc(100% - 20rpx);
+    margin-left:10rpx;
+    margin-top: 10rpx;
+    background: #F0F0F0;
 }
 .bottom_bt{
     width: 90%;

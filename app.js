@@ -421,6 +421,37 @@ App({
       isSingleItem:true
     }
   ],
+  reportResult:{
+      "status": 1,
+      "msg": "报告及解决方案",
+      "result": {
+          "id": "196",
+          "openid": "0",
+          "tutor_course": "语文,数学,英语",
+          "cid": "7,8,9",
+          "sid": "0",
+          "all_score": "9.0",
+          "all_content": "您的孩子在校期间的听课效率较高，可以做到情绪饱满、精力集中，抓住重点、弄清关键。孩子认为自己基础不行，自暴自弃；对学习感到恐惧、焦虑、厌恶；总觉得是在“帮”老师和家长读书。",
+          "first_id": "15",
+          "first_problem": "听课效率高",
+          "first_ability": "10.2",
+          "first_content": "有上课主动回答问题的习惯 ，善于认真思考每一个问题，积极回答。",
+          "second_id": "8",
+          "second_problem": "贪玩厌学",
+          "second_ability": "9.4",
+          "second_content": "孩子贪玩厌学的问题总在困扰家长。由于缺乏学习的主动性，孩子经常认为学习是为了完成任务，把学习完全当成一种负担。因此导致厌学情绪严重，越学越觉得枯燥乏味。",
+          "tutor_ability1": "可以在课堂自主加深对知识的理解，具有比较好的心理素质。",
+          "tutor_ability2": "开发孩子学习动力，调动学习的主动性，分析孩子的学习目标和方向，激发学习兴趣，让孩子发现学习的乐趣所在。最终，让孩子快乐学习，用自己喜欢的方式学习。",
+          "createtime": "1495096333",
+          "sub": [
+              "语文",
+              "数学",
+              "英语"
+          ],
+          "first": "0",
+          "second": "2"
+      }
+  },
   teacherListData:[
     {
       icon:'images/ico_splash.png',
