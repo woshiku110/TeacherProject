@@ -515,6 +515,7 @@ App({
   myTeacherList:{
     "result":[
                 {
+                  "id":"1",
                   "sex":"1",
                   "name":"林小四",
                   "avater":"http://119.23.22.247/Uploads/Download/jiao.png",
@@ -567,6 +568,7 @@ App({
                   ]
             },
             {
+                  "id":"2",
                   "sex":"1",
                   "name":"林小四",
                   "avater":"http://119.23.22.247/Uploads/Download/jiao.png",

@@ -25,7 +25,7 @@ function UrlLoad(address,params,loadOk){
     })
 }
 //加载筛选网络数据
-function loadBasicDatas(loadOk){
+function loadTeacherList(loadOk){
     showDialog();
     UrlLoad('http://119.23.22.247/index.php/apicloud/index/question',{},
         function(isOk,data){
@@ -39,5 +39,22 @@ function loadBasicDatas(loadOk){
         }
     )
 }
+//加载教师详情
+function loadTeacherDetail(param,loadOk){
+    showDialog();
+    UrlLoad('http://119.23.22.247/index.php/apicloud/parent/teacherDetail',param,
+        function(isOk,data){
+            if(isOk){
+                loadOk(true,data);
+                closeDialog();
+            }else{
+                loadOk(false,data);
+                closeDialog();
+            }
+        }
+    )
+}
 module.exports.showDialog = showDialog;
 module.exports.closeDialog = closeDialog;
+module.exports.loadTeacherList = loadTeacherList;
+module.exports.loadTeacherDetail = loadTeacherDetail;

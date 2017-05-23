@@ -1,4 +1,5 @@
 var app = getApp();
+var that;
 Page({
   data: {
     name:'',
@@ -11,10 +12,14 @@ Page({
     skillTags:'',
     albumImages:'',
     point:'',
-    talkList:''
+    talkList:'',
+    isLove:false,
+    showModalStatus:false,
+    loveModalStatus:false,
+    loveText:"您好，是关注吗？"
   },
   onShow:function(){
-      var that = this; 
+      that = this; 
       that.setData(
         {
           name:app.teacherDetail.name,
@@ -31,5 +36,31 @@ Page({
         }
       );
       console.log(that.data.albumImages);
-  }
+  },
+  love:function(){
+      that.setData(
+        {
+            loveText:"您要取消关注吗?",
+            loveModalStatus:true
+        });
+  },
+  unlove:function(){
+      that.setData(
+            {
+                loveText:"您要关注吗?",
+                loveModalStatus:true
+            }
+        );
+  },
+  modalBindaconfirm:function(){
+        that.setData({
+            loveModalStatus:false,
+            isLove:!that.data.isLove
+        });
+    },
+    modalBindcancel:function(){
+        that.setData({
+            loveModalStatus:false
+        })
+    },
 })

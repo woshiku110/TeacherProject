@@ -84,10 +84,10 @@
     margin-bottom: 10rpx;
     background-color:white;
     align-items: center; 
-    border:1rpx solid #6aabfe;
+    border:1rpx solid #fe9c75;
     border-radius: 10rpx;
     /*以下是新增文本样式*/
-    color: #6aabfe;
+    color: #fe9c75;
     word-wrap:  break-word;
     overflow: auto;
 }

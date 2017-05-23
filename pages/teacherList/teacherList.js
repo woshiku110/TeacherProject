@@ -1,6 +1,7 @@
 var app = getApp();
 var that;
 var selectedIndex;
+var utils = require('js/utils.js');
 Page({
     data:{
         userInfo: {},
@@ -12,31 +13,28 @@ Page({
     },
     onLoad:function(){
         that = this;
-        that.setData(
-            {
-                teacherListData:app.teacherListData,
-                myTeacherList:app.myTeacherList
+        utils.loadTeacherList(
+            function(isok,data){
+                if(isok){
+                    that.loadListOk(data);
+                }else{
+                    that.loadListOk(data);
+                }
             }
         );
-        console.log(that.data.teacherListData);
     },
      
     userClick:function(e){
         var index = e.currentTarget.dataset.value;
         console.log('index：'+index);
-        wx.navigateTo({
-          url: '../teacherDetail/teacherDetail',
-          success: function(res){
-            // success
-            console.log('success');
-          },
-          fail: function() {
-            // fail
-            console.log('fail');
-          },
-          complete: function() {
-          }
-        })
+        var id = app.myTeacherList.result[index-1].id;
+        utils.loadTeacherDetail({"id":id},function(isOk,data){
+            if(isOk){
+                that.loadTeacherDetailOk(data);
+            }else{
+                that.loadTeacherDetailOk(data);
+            }
+        });
     },
     loveClick:function(e){
         var index = e.currentTarget.dataset.value;
@@ -57,6 +55,39 @@ Page({
                 loveModalStatus:true
             }
         );
+    },
+    //加载网络完成
+    loadListOk:function(e){
+        that.setData(
+            {
+                teacherListData:app.teacherListData,
+                myTeacherList:app.myTeacherList
+            }
+        );
+        console.log(that.data.teacherListData);
+    },
+    //加载失败
+    loadListFail:function(e){
+
+    },
+    //加载老师页面完成
+    loadTeacherDetailOk(e){
+        wx.navigateTo({
+          url: '../teacherDetail/teacherDetail',
+          success: function(res){
+            // success
+            console.log('success');
+          },
+          fail: function() {
+            // fail
+            console.log('fail');
+          },
+          complete: function() {
+          }
+        })
+    },
+    loadTeacherDetailFail(e){
+
     },
     modalBindaconfirm:function(){
         that.setData({

@@ -8,7 +8,7 @@
     <view style="width:calc(100% - 30rpx);height:1rpx;margin-left:20rpx;background-color:#e2e2e2"></view>
     <view class="content_list">
         <block wx:for="{{myTeacherList.result}}" wx:for-item="teacherData"  wx:key="*this">
-            <view class="content_list_item" >
+            <view class="content_list_item" bindtap="userClick" data-value="{{index + 1}}">
                 <view class="content_list_item_top">
                     <view class="content_list_item_top_left">
                         <image style="width:70rpx;height:70rpx;margin-left:10rpx" 
@@ -23,46 +23,46 @@
                             <label style="font-size:10pt;color:red">{{teacherData.cost}}</label>
                             <label style="font-size:8pt;color:green">/小时</label>
                         </view>
-                        <view style="min-width:40rpx;height:40rpx" bindtap="loveClick" data-value="{{index + 1}}">
+                        <view style="min-width:40rpx;height:40rpx"  data-value="{{index + 1}}">
                             <block wx:if="{{teacherData.default == 1}}">
                                 <image style="width:25rpx;height:25rpx;margin-top:5rpx" 
-                                src="images/love_selected.jpg" background-size="cover"></image>
+                                src="images/focus.png" background-size="cover"></image>
                                 <text style="font-size:12pt;margin-left:5rpx">{{teacherData.follow}}</text>
                             </block>
                             <block wx:if="{{teacherData.default == 0}}">
                                 <image style="width:25rpx;height:25rpx;margin-top:5rpx" 
-                                src="images/love_unselect.jpg" background-size="cover"></image>
+                                src="images/unfocus.png" background-size="cover"></image>
                             </block>
                         </view>
                     </view>
                 </view>
                 <view style="width:96%;height:2rpx;background:#e2e2e2;margin-left:2%"></view>
                 <text style="margin-left:20rpx;margin-top:15rpx;font-size:11pt">擅长科目</text>
-                <view class="content_list_item_content" bindtap="userClick" data-value="{{index + 1}}">
+                <view class="content_list_item_content">
                     <block wx:for="{{teacherData.subjects}}" wx:for-item="lab"  wx:key="*this">
                         <label class="label_type_one">{{lab.name}}</label>
                     </block>
                 </view>
                 <text style="margin-left:20rpx;margin-top:15rpx;font-size:11pt">上课风格</text>
-                <view class="content_list_item_content" bindtap="userClick" data-value="{{index + 1}}">
+                <view class="content_list_item_content">
                     <block wx:for="{{teacherData.style}}" wx:for-item="lab"  wx:key="*this">
                         <label class="label_type_one" style="background:#FF5B46">{{lab.name}}</label>
                     </block>
                 </view>
                 <text style="margin-left:20rpx;margin-top:15rpx;font-size:11pt">教学特色</text>
-                <view class="content_list_item_content" bindtap="userClick" data-value="{{index + 1}}">
+                <view class="content_list_item_content">
                     <block wx:for="{{teacherData.tese}}" wx:for-item="lab"  wx:key="*this">
                         <label class="label_type_one" style="background:#FF5B46">{{lab.name}}</label>
                     </block>
                 </view>
                 <text style="margin-left:20rpx;margin-top:15rpx;font-size:11pt">教学能力</text>
-                <view class="content_list_item_content" bindtap="userClick" data-value="{{index + 1}}">
+                <view class="content_list_item_content">
                     <block wx:for="{{teacherData.ability}}" wx:for-item="lab"  wx:key="*this">
                         <label class="label_type_one" style="background:#FF5B46">{{lab.teacher_ability}}</label>
                     </block>
                 </view>
                 <view style="width:96%;height:2rpx;background:#e2e2e2;margin-left:2%"></view>
-                <view class="content_list_item_bottom" bindtap="userClick" data-value="{{index + 1}}">
+                <view class="content_list_item_bottom">
                     <view class="content_list_item_bottom_left">历史授课<label style="color:#FFB400">{{teacherData.history}}</label></view>
                     <view class="content_list_item_bottom_right">综合评分<label style="color:#FFB400">{{teacherData.score}}</label></view>
                 </view>
@@ -75,7 +75,7 @@
         <image src="images/code.png"></image>
     </view>
 </view>
-<modal title="是否要收藏？" hidden="{{!loveModalStatus}}" confirm-text="确定" cancel-text="取消"
+<modal title="是否要关注？" hidden="{{!loveModalStatus}}" confirm-text="确定" cancel-text="取消"
   bindconfirm="modalBindaconfirm" bindcancel="modalBindcancel">{{loveText}}</modal>
 <!--<view class="commodity_screen_one" bindtap="hideModal" wx:if="{{showModalStatus}}">
 
