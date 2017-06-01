@@ -2,7 +2,7 @@ var app = getApp();
 Page({
   data: {
     motto: 'Hello World',
-    picPath:'images/load.png'
+    picPath:'images/load.jpg'
   },
   onShow:function(){
     var that = this;  

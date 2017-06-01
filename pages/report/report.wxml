@@ -1,15 +1,23 @@
 <view class="page">
     <view class="top_conatainer">
         <view class="top_title">
-            <image src="images/study-report.png" style="width:200rpx;height:80rpx"></image>
+            <!--<image src="images/study-report.png" style="width:200rpx;height:80rpx"></image>-->
+            <view class="line">
+            </view>
+            <view class="content"><text>学习能力报告</text></view>
         </view>
+        <view></view>
         <view class="total_point">
             <text class="text_title">综合评分:{{totalPoint}}</text>
             <text class="text_content">{{totalContent}}</text>
         </view>
     </view>
     <view class="content_container">
-        <image src="images/subject-report.png" style="width:200rpx;height:80rpx"></image>
+        <view class="top_title">
+            <view class="line">
+            </view>
+            <view class="content"><text>学科报告</text></view>
+        </view>
         <view class="subject">
             <block wx:for="{{totalSubjects}}" wx:for-item="totalSubject"  wx:key="*this">
                 <view class="view">
@@ -35,7 +43,12 @@
             <text class="point">评分:{{goodMark}}</text>
             <text class="content">{{goodContent}}</text>
         </view>
-        <image src="images/home-teacher.png" style="width:200rpx;height:80rpx"></image>
+        <view class="top_title">
+            <view class="line">
+            </view>
+            <view class="content"><text>家教方案</text></view>
+        </view>
+        
         <text style="margin-left:10rpx;margin-top:10rpx;margin-bottom:20rpx;color: #666;">专业课程</text>
         <view class="subject">
             <block wx:for="{{teacherSubs}}" wx:for-item="teacherSub"  wx:key="*this">

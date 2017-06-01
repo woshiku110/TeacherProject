@@ -87,15 +87,20 @@ function userLogin(){
               data: {
                   "js_code":e.code,
                   "appid":'wx154c1ef4940d0887',
-                  "secret":""
+                  "secret":"2a60e4f483f3db6a5acad957ca675fd6",
+                  "grant_type":"authorization_code"
               },
               method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
               // header: {}, // 设置请求的 header
               success: function(res){
                 // success
+                console.log("login ok");
+                console.log(res);
               },
               fail: function(res) {
                 // fail
+                console.log("login fail");
+                console.log(res);
               },
               complete: function(res) {
                 // complete

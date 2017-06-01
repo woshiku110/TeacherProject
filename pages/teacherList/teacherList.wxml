@@ -23,7 +23,7 @@
                             <label style="font-size:10pt;color:red">{{teacherData.cost}}</label>
                             <label style="font-size:8pt;color:green">/小时</label>
                         </view>
-                        <view style="min-width:40rpx;height:40rpx"  data-value="{{index + 1}}">
+                        <view style="min-width:50rpx;height:40rpx"  data-value="{{index + 1}}">
                             <block wx:if="{{teacherData.default == 1}}">
                                 <image style="width:25rpx;height:25rpx;margin-top:5rpx" 
                                 src="images/focus.png" background-size="cover"></image>

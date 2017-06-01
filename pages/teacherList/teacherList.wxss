@@ -16,7 +16,7 @@
     display: flex;
     width:100%;
     height: 45rpx;
-    border-left: solid 4rpx #fe9c75;
+    border-left: solid 2rpx #F08080;
     align-items: center;
     justify-content:  space-between;
 }
@@ -75,7 +75,7 @@
 .label_type_one{
     min-width: 80rpx;
     height: 40rpx;
-    background-color:  #fe9c75;
+    background-color:  #F08080;
     font-size: 10pt;
     display: flex;
     align-items: center;
@@ -102,7 +102,7 @@
 .label_type_two{
     min-width: 60rpx;
     height: 40rpx;
-    background-color:  deeppink;
+    background-color:  #F08080;
     font-size: 10pt;
     display: flex;
     align-items: center;
